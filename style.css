@@ -1,0 +1,173 @@
+
+@font-face {
+    font-family: Quincho;
+    src: url("font/QuinchoScript_PersonalUse.ttf");
+}
+@font-face {
+    font-family: LightHouse;
+    src: url("font/Lighthouse_PersonalUse.ttf");
+}
+@font-face {
+    font-family: Amicable;
+    src: url("font/perfectly amicable.ttf");
+}
+
+global{
+	width:80%;
+	background-image: url("http://www.hdwallpaperfreebie.com/wp-content/uploads/2016/01/Zig-Zag-Line-Black-Background-Hd.jpg");
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-attachment: fixed;
+	color: black;
+	margin: auto;
+	line-break : loose;
+}
+h1{
+	text-align: center;
+	font-family : "Quincho";
+	font-size: 300%;
+	font-weight: normal;
+}
+h2{
+	color : #003333;
+	margin-top: 0px;
+	text-align: center;
+	font-family : "LightHouse";
+	text-decoration: none;
+	font-weight: normal;
+}
+
+h3{
+	text-align: Left;
+	font-family : "Amicable";
+	text-decoration: none;
+	font-weight: normal;
+}
+
+
+time{
+	text-align : center;
+	display: block;
+	fint-family : 'LightHouse';
+	font-size : 150%;
+}
+
+
+meth{
+	display : block;
+}
+meth:before{
+	content : "Method : ";
+}
+
+data{
+	display : block;
+	padding-left : 10px;
+	border : solid;
+}
+data:before{
+	content : " Data : ";
+}
+
+budget{
+	display : block;
+}
+budget:before{
+	content : "Budget : ";
+}
+
+contracts{
+	display : block;
+	border : solid;
+}
+contracts:before{
+	content : "Contracts : ";
+}
+
+parameters{
+	display : block;
+}
+parameters:before{
+	content : "Parameters : ";
+}
+
+men{
+	display : block;
+}
+men:before{
+	content : "Men : ";
+}
+
+heading{
+	display : block;
+}
+heading:before{
+	content : "Heading : ";
+}
+
+extras{
+	display : block;
+	padding-left : 10px;
+	border : solid;
+}
+extras:before{
+	content : "Extras : ";
+}
+
+found{
+	display : block;
+}
+found:before{
+	content : "Found : ";
+}
+
+cost{
+	display : block;
+}
+cost:before{
+	content : "Cost : ";
+}
+
+resource{
+	display : block;
+}
+resource:before{
+	content : "Resource : ";
+}
+
+cond{
+	display : block;
+}
+cond:before{
+	content : "Condition : ";
+}
+
+amount{
+	display : block;
+}
+amount:before{
+	content : "Amount : ";
+}
+
+part{
+	display : block;
+	text-align : center;
+	font-family : 'Amicable';
+}
+
+trace{
+	display : block;
+	margin-top : 20px;
+	border-width : 5px;
+	border-style : solid;
+	border-radius: 20px;
+	border-color : grey;
+	color : black;
+	padding: 10px;
+	background-color: white;
+	position : relative;
+
+}

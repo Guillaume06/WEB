@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="global">
+            <oneOrMore>
+                <element name="trace">
+                    <element name="time">
+                        <data type="integer"/>
+                    </element>
+                    <element name="meth">
+                        <data type="NCName"/>
+                    </element>
+                    <element name="data">
+                        <optional>
+                            <choice>
+                                <group>
+                                    <element name="status">
+                                        <data type="NCName"/>
+                                    </element>
+                                    <element name="cost">
+                                        <data type="integer"/>
+                                    </element>
+                                    <element name="extras">
+                                        <zeroOrMore>
+                                            <element name="resources">
+                                                <oneOrMore>
+                                                    <choice>
+                                                        <text/>
+                                                        <ref name="amount"/>
+                                                        <ref name="resource"/>
+                                                        <element name="cond">
+                                                            <data type="NCName"/>
+                                                        </element>
+                                                    </choice>
+                                                </oneOrMore>
+                                            </element>
+                                        </zeroOrMore>
+                                        <optional>
+                                            <choice>
+                                                <element name="pois">
+                                                    <element name="id">
+                                                        <text/>
+                                                    </element>
+                                                    <element name="kind">
+                                                        <data type="NCName"/>
+                                                    </element>
+                                                </element>
+                                                <group>
+                                                    <element name="range">
+                                                        <data type="integer"/>
+                                                    </element>
+                                                    <element name="found">
+                                                        <data type="NCName"/>
+                                                    </element>
+                                                </group>
+                                            </choice>
+                                        </optional>
+                                        <zeroOrMore>
+                                            <element name="biomes">
+                                                <data type="NCName"/>
+                                            </element>
+                                        </zeroOrMore>
+                                        <optional>
+                                            <choice>
+                                                <ref name="amount"/>
+                                                <element name="altitude">
+                                                    <data type="integer"/>
+                                                </element>
+                                                <element name="creeks">
+                                                    <text/>
+                                                </element>
+                                            </choice>
+                                        </optional>
+                                    </element>
+                                </group>
+                                <group>
+                                    <element name="budget">
+                                        <data type="integer"/>
+                                    </element>
+                                    <oneOrMore>
+                                        <element name="contracts">
+                                            <ref name="amount"/>
+                                            <ref name="resource"/>
+                                        </element>
+                                    </oneOrMore>
+                                    <element name="men">
+                                        <data type="integer"/>
+                                    </element>
+                                    <element name="heading">
+                                        <data type="NCName"/>
+                                    </element>
+                                </group>
+                            </choice>
+                        </optional>
+                        <optional>
+                            <element name="action">
+                                <data type="NCName"/>
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="parameters">
+                                <choice>
+                                    <ref name="resource"/>
+                                    <element name="direction">
+                                        <data type="NCName"/>
+                                    </element>
+                                    <group>
+                                        <element name="creek">
+                                            <text/>
+                                        </element>
+                                        <element name="people">
+                                            <data type="integer"/>
+                                        </element>
+                                    </group>
+                                </choice>
+                            </element>
+                        </optional>
+                    </element>
+                    <element name="part">
+                        <data type="NCName"/>
+                    </element>
+                </element>
+            </oneOrMore>
+        </element>
+    </start>
+    <define name="amount">
+        <element name="amount">
+            <data type="NMTOKEN"/>
+        </element>
+    </define>
+    <define name="resource">
+        <element name="resource">
+            <data type="NCName"/>
+        </element>
+    </define>
+</grammar>
